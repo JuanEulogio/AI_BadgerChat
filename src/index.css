@@ -1,0 +1,60 @@
+.app {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 1rem
+}
+
+.inline-form {
+  display: flex;
+  width: 100%;
+}
+
+.message-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  min-height: 50vh;
+  max-height: 80vh;
+}
+
+.client-message {
+  background-color: white;
+  padding: 8px 8px 0 8px;
+  margin-right: 0.5rem;
+  border-radius: 10px;
+  float: right;
+  margin-left: auto;
+  overflow-wrap: break-word;
+  text-align: right;
+}
+
+.ai-message {
+  background-color: lightblue;
+  padding: 8px 8px 0 8px;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  float: left;
+  margin-right: auto;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.error {
+  background-color: blanchedalmond;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+.input-area {
+  display: flex;
+  justify-content: space-between;
+}
