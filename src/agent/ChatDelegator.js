@@ -7,20 +7,31 @@ const createChatDelegator = () => {
     let delegate;
     let delegateName;
 
+
     const DELEGATE_MAP = {
         "LOGIN": createLoginSubAgent,
         "REGISTER": createRegisterSubAgent,
         "CREATE": createPostSubAgent
     }
 
+    //called from chatAgent functions that activate delegator.beginDeligation( "the FUNCTION string call NAME")
     const beginDelegation = async (candidate, data) => {
+        //Checks if the beginDelegation candidate is a valid input to call its specific function
         if (Object.keys(DELEGATE_MAP).includes(candidate)) {
+            //gets the function mapped to teh candidate
             const initiator = DELEGATE_MAP[candidate]
             if (typeof(initiator) === 'function') {
                 delegateName = candidate;
+                //initiator is basically the same function we copied. So if we said "LOGIN", initiator= createLoginSubAgent const/file,
+                //so making delegate = initiator(endDelegation) it is the same as making createLoginSubAgent constructor with its parameter set
+                // to end deligation
                 delegate = initiator(endDelegation);
+                
+                //TODO: Whats handleInitialize??
+                    //Its the same handleInitialize of whatever the delegate is
                 if (typeof(delegate.handleInitialize) === 'function') {
                     if (data) {
+                        //runs the sub agents functions
                         return await (async () => delegate.handleInitialize(data))();
                     } else {
                         return await (async () => delegate.handleInitialize())();
@@ -70,6 +81,9 @@ const createChatDelegator = () => {
         }
     }
 
+    //the parameter "end" that subAgents use it this, and data is some functions return
+    //its structured like this so we can execute that function and its return is passed on as a parameter
+    // which will be returned here, to the user, BUT ALSO EXTENDING the function of ending our deligation at the same time
     const endDelegation = (data) => {
         if (!delegate) {
             console.warn("Attempting to end delegation, but no delegate has been set! Ignoring...");

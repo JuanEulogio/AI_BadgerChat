@@ -3,6 +3,7 @@ const ofRandom = (arr) => {
 }
 
 const isLoggedIn = async () => {
+    
     const resp = await fetch("https://cs571.org/api/s24/hw11/whoami", {
         credentials: "include",
         headers: {

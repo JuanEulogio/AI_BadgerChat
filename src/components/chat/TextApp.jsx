@@ -52,6 +52,8 @@ function TextApp() {
         e?.preventDefault();
         const trimmedInput = input.trim();
         if (trimmedInput) {
+            //NOTE: claisifies if sensitive via setIsSensitive in line 87,
+            //where we classify the NEXT line to be sensitive, if the ai response that they want senstive data
             if (isSensitive) {
                 addClientMessage("Sensitive information redacted!");
             } else {
@@ -77,11 +79,12 @@ function TextApp() {
         } else {
             handleAIMessage(ms)
             setIsLoading(false);
-        }
-        
+        }   
     }
 
     function handleAIMessage(m) {
+        //THIS is where we classify it sensitive. Instead of passing a string to textApp, we pass a object with
+        //msg, nextIsSensitive
         if(typeof(m) === 'object') {
             if (m.nextIsSensitive) {
                 setIsSensitive(true);
