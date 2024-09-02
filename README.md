@@ -1,4 +1,4 @@
-AI-Powered Chatbot Web App Development
+## AI-Powered Chatbot Web App Development
 
 - Trained a Wit.AI-based chatbot to handle user intents such as: assisting on how to navigate the application, listing available chatrooms, fetching messages, handling user authentication (login, registration, logout), and managing user posts in a specific chatroom.
 - Enhanced user interaction through the AI's altering emoticons
