@@ -27,8 +27,8 @@ const createChatDelegator = () => {
                 // to end deligation
                 delegate = initiator(endDelegation);
                 
-                //TODO: Whats handleInitialize??
-                    //Its the same handleInitialize of whatever the delegate is
+                //Q: Whats handleInitialize?? 
+                //A: Its the same handleInitialize of whatever the delegate is
                 if (typeof(delegate.handleInitialize) === 'function') {
                     if (data) {
                         //runs the sub agents functions
