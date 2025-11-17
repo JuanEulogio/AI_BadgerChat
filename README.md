@@ -24,7 +24,7 @@ AI-Powered Chatbot Web App
 
 ## 🧰 Tech Stack
 
-- **Frontend:** JavaScript, HTML, CSS, Vite  
+- **Frontend:** JavaScript, React js , Vite (build tool)
 - **AI / NLP:** Wit.AI NLP model 
 - **Authentication:** JWT auth
 
