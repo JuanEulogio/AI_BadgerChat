@@ -25,18 +25,10 @@ AI-Powered Chatbot Web App
 ## 🧰 Tech Stack
 
 - **Frontend:** JavaScript, HTML, CSS, Vite  
-- **Backend:** (you didn’t specify, but mention whatever you used — e.g., Node.js / Express, Python / Flask)  
-- **AI / NLP:** (e.g., Wit.AI, OpenAI, or whatever you used)  
-- **Authentication:** JWT or other method (depending on your implementation)  
-- **Deployment:** (if applicable — e.g., Vercel, Netlify, Heroku)
+- **AI / NLP:** Wit.AI NLP model 
+- **Authentication:** JWT auth
 
----
 
----
-
-# ⚙️ Installation & Setup Instructions (Frontend)
-
-Clone and run the **frontend** locally.
 
 ---
 
